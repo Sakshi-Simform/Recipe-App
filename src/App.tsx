@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-     <h1 className="head-content">CookPedia</h1>
+     <h1 className="head-content">CookBook</h1>
     </>
   )
 }
