@@ -40,11 +40,11 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
   };
 
   return (
-    <div className={`recipe-card ${isFlip ? 'flipped' : ''}`} onClick={handleClick}>
+    <div className={`recipe-card ${isFlip ? 'flipped' : ''}`} onClick={handleClick} tabIndex={0}>
       <div className="recipe-card-inner">
         {/* Front Side */}
         <div className="recipe-card-front">
-          <img src={recipe.image} alt={recipe.title}  loading = "lazy"/>
+          <img src={recipe.image} alt={recipe.title}  loading = "lazy" />
 
           {/* Info Box */}
           <div className="recipe-info-box">
@@ -54,7 +54,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
               </svg>
               <p className='calorie-display'>{recipe.calories} kcal</p>
             </div>
-            <div className="rating">{renderRating(recipe.rating)}</div>
+            <div className="rating" role='rating-btn'>{renderRating(recipe.rating)}</div>
           </div>
 
           <h3>{recipe.title}</h3>
