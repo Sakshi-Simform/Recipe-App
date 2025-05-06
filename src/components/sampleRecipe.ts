@@ -38,10 +38,10 @@ export const sampleRecipes: Array<Recipe> = [
       title: 'Hakka Noodles',
       image: 'https://th.bing.com/th/id/OIP.x_ym2qqYZS81WNfHh1OK4wHaJd?cb=iwc1&rs=1&pid=ImgDetMain',
       shortDescription: 'A flavorful Indo-Chinese noodle dish tossed with crunchy vegetables, soy sauce, and aromatic seasonings for a delightful meal.',
-      ingredients: ['Hakka noodles', 'Carrots', 'Bell peppers', 'Cabbage', 'Soy sauce', 'Chili sauce', 'Salt', 'Pepper', 'Oil'],
+      ingredients: ['Hakka noodles', 'Carrots', 'Bell peppers', 'Cabbage', 'Soy sauce', 'Chili sauce'],
       instructions: 'Boil hakka noodles until they are cooked but firm. Drain and toss in a little oil to prevent sticking. In a pan, stir-fry minced garlic with chopped vegetables. Add soy sauce, chili sauce, vinegar, salt, and pepper. Mix in the cooked noodles and toss well. Garnish with spring onions and serve hot.',
       calories: 137,
-      rating: 4.4
+      rating: 4.4,
   },
   {
     id: 5,
