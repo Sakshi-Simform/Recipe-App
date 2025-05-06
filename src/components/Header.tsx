@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       <header>
         <div className='left-logo'>
           <img
-            src='https://img.freepik.com/premium-vector/simple-clean-modern-spoon-restaurant-logo-black-white-color-vector-illustration_969863-11106.jpg'
+            src='/icon/logo1.png'
             className='logo-image'
             alt='logo'
           />
