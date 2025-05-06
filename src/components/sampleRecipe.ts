@@ -34,14 +34,14 @@ export const sampleRecipes: Array<Recipe> = [
     rating: 3.5
   },
   {
-    id: 4,
-    title: 'Spaghetti',
-    image: 'https://th.bing.com/th/id/OIP.4tWEsBNQcmY7wx_FTPREtwHaLH?rs=1&pid=ImgDetMain',
-    shortDescription: 'Italian pasta dish featuring al dente spaghetti, creamy egg-based sauce, crispy pancetta, and a touch of Parmesan cheese and black pepper for a rich and comforting flavor.',
-    ingredients: ['Spaghetti', 'Eggs', 'Parmesan cheese', 'Pancetta', 'Black pepper'],
-    instructions: 'Cook pasta, fry pancetta, mix eggs and cheese, combine everything',
-    calories: 400,
-    rating: 4.2
+      id: 4,
+      title: 'Hakka Noodles',
+      image: 'https://th.bing.com/th/id/OIP.x_ym2qqYZS81WNfHh1OK4wHaJd?cb=iwc1&rs=1&pid=ImgDetMain',
+      shortDescription: 'A flavorful Indo-Chinese noodle dish tossed with crunchy vegetables, soy sauce, and aromatic seasonings for a delightful meal.',
+      ingredients: ['Hakka noodles', 'Carrots', 'Bell peppers', 'Cabbage', 'Soy sauce', 'Chili sauce', 'Salt', 'Pepper', 'Oil'],
+      instructions: 'Boil hakka noodles until they are cooked but firm. Drain and toss in a little oil to prevent sticking. In a pan, stir-fry minced garlic with chopped vegetables. Add soy sauce, chili sauce, vinegar, salt, and pepper. Mix in the cooked noodles and toss well. Garnish with spring onions and serve hot.',
+      calories: 137,
+      rating: 4.4
   },
   {
     id: 5,
@@ -127,4 +127,84 @@ export const sampleRecipes: Array<Recipe> = [
     calories: 290,
     rating: 3.5
   },
+  {
+    id: 13,
+    title: 'Blueberry Smoothie',
+    image: 'https://th.bing.com/th/id/OIP.8yCXdQejKrhW3FumeNz7sAHaHa?cb=iwc1&rs=1&pid=ImgDetMain',
+    shortDescription: 'A creamy and nutritious smoothie packed with antioxidants from fresh blueberries, blended with yogurt and honey.',
+    ingredients: ['Blueberries', 'Banana', 'Yogurt', 'Honey', 'Milk', 'Ice cubes'],
+    instructions: 'Blend all ingredients together until smooth. Pour into a glass, garnish with extra blueberries, and enjoy cold.',
+    calories: 220,
+    rating: 4.3
+},
+{
+  id: 14,
+  title: 'Paneer Tikka',
+  image: 'https://th.bing.com/th/id/OIP.DH0KMPXHqWYW28hEc7OXLQHaE8?cb=iwc1&rs=1&pid=ImgDetMain',
+  shortDescription: 'A delicious Indian appetizer where paneer cubes are marinated in spiced yogurt, grilled to perfection, and served with fresh mint chutney.',
+  ingredients: ['Paneer cubes', 'Yogurt', 'Ginger-garlic paste', 'Red chili powder', 'Turmeric', 'Garam masala', 'Lemon juice', 'Salt', 'Oil'],
+  instructions: 'Mix yogurt with spices, ginger-garlic paste, and lemon juice. Marinate paneer cubes for at least 30 minutes. Grill or pan-fry until golden brown. Serve hot with mint chutney and onion rings.',
+  calories: 320,
+  rating: 4.2
+},
+{
+  id: 15,
+  title: 'Vegetarian Tacos',
+  image: 'https://th.bing.com/th/id/OIP.VxancbRVxPD4EbiFENxF4AHaLG?cb=iwc1&rs=1&pid=ImgDetMain',
+  shortDescription: 'Crispy corn tortillas filled with a flavorful mix of beans, grilled veggies, cheese, and fresh salsa.',
+  ingredients: ['Corn tortillas', 'Black beans', 'Bell peppers', 'Onions', 'Cheese', 'Lettuce', 'Salsa'],
+  instructions: 'Grill bell peppers and onions. Warm up black beans. Assemble tacos by layering beans, grilled veggies, cheese, and lettuce inside the tortillas. Top with fresh salsa and serve.',
+  calories: 350,
+  rating: 4.5
+},
+{
+  id: 16,
+  title: 'Vegetable Sushi Rolls',
+  image: 'https://th.bing.com/th/id/OIP.kV7l9H-r724OAJaP32qPbgAAAA?cb=iwc1&rs=1&pid=ImgDetMain',
+  shortDescription: 'Delicate sushi rolls made with seasoned rice, crisp vegetables, and wrapped in seaweed.',
+  ingredients: ['Sushi rice', 'Nori seaweed', 'Cucumber', 'Carrot', 'Avocado', 'Rice vinegar', 'Soy sauce'],
+  instructions: 'Cook sushi rice and season with rice vinegar. Lay a sheet of nori, spread rice, and place sliced cucumber, carrot, and avocado in the center. Roll tightly, slice into pieces, and serve with soy sauce.',
+  calories: 320,
+  rating: 4.3
+},
+{
+  id: 17,
+  title: 'Masala Dosa',
+  image: 'https://th.bing.com/th/id/OIP.6Nx_C1m4YCujBiHe48YpHAHaE8?cb=iwc1&rs=1&pid=ImgDetMain',
+  shortDescription: 'A crispy, golden-brown dosa stuffed with spiced potato filling, served with coconut chutney and sambar.',
+  ingredients: ['Rice', 'Urad dal', 'Potatoes', 'Onions', 'Green chilies', 'Mustard seeds', 'Turmeric', 'Curry leaves', 'Salt', 'Oil'],
+  instructions: 'Ferment rice and urad dal batter. Cook potatoes with spices, onions, and mustard seeds for the filling. Spread dosa batter on a pan, cook till crispy, and add potato filling. Fold and serve with chutney and sambar.',
+  calories: 150,
+  rating: 4.8
+},
+{
+  id: 18,
+  title: 'Khaman Dhokla',
+  image: 'https://th.bing.com/th/id/OIP.netA-1sRImZbHJVUBxkCPwHaE8?cb=iwc1&rs=1&pid=ImgDetMain',
+  shortDescription: 'A soft and fluffy steamed gram flour snack, lightly spiced and garnished with mustard seeds and curry leaves.',
+  ingredients: ['Besan (gram flour)', 'Yogurt', 'Turmeric', 'Salt', 'Green chilies', 'Mustard seeds', 'Curry leaves', 'Sugar', 'Lemon juice'],
+  instructions: 'Mix besan with yogurt, turmeric, salt, and water into a smooth batter. Steam in a greased dish until cooked. Temper mustard seeds, curry leaves, sugar, and lemon juice, then pour over dhokla. Cut into pieces and serve.',
+  calories: 280,
+  rating: 4.5
+},
+{
+  id: 19,
+  title: 'Chocolate Jar Cake',
+  image: 'https://i.pinimg.com/originals/2a/b9/7e/2ab97ef6d5b6476105c8bd99ea8f4f72.jpg',
+  shortDescription: 'A rich and indulgent jar cake layered with moist chocolate cake, creamy frosting, and crunchy toppings.',
+  ingredients: ['Chocolate sponge cake', 'Whipped cream', 'Chocolate ganache', 'Crushed biscuits or nuts', 'Choco chips', 'Sprinkles (optional)'],
+  instructions: 'Crumble chocolate sponge cake into pieces. In a clean jar, layer cake crumbs, whipped cream, and chocolate ganache. Repeat the layers until the jar is full. Top with crushed biscuits, choco chips, and sprinkles. Chill for an hour before serving.',
+  calories: 400,
+  rating: 4.8
+},
+{
+  id: 20,
+  title: 'Oreo Shake',
+  image: 'https://lilluna.com/wp-content/uploads/2021/09/oreo-milkshake-resize-3-856x1198.jpg',
+  shortDescription: 'A rich and creamy shake made with Oreo cookies blended to perfection with milk and ice cream.',
+  ingredients: ['Oreo cookies', 'Cold milk', 'Vanilla ice cream', 'Chocolate syrup (optional)', 'Whipped cream (optional)'],
+  instructions: 'Crush Oreo cookies into small pieces. Blend Oreos with cold milk and vanilla ice cream until smooth. Drizzle with chocolate syrup and top with whipped cream, if desired. Serve chilled.',
+  calories: 420,
+  rating: 4.6
+},
 ];
