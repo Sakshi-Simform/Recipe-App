@@ -204,7 +204,7 @@ export const sampleRecipes: Array<Recipe> = [
   shortDescription: 'A rich and creamy shake made with Oreo cookies blended to perfection with milk and ice cream.',
   ingredients: ['Oreo cookies', 'Cold milk', 'Vanilla ice cream', 'Chocolate syrup (optional)', 'Whipped cream (optional)'],
   instructions: 'Crush Oreo cookies into small pieces. Blend Oreos with cold milk and vanilla ice cream until smooth. Drizzle with chocolate syrup and top with whipped cream, if desired. Serve chilled.',
-  calories: 420,
+  calories: 310,
   rating: 4.6
 },
 ];
