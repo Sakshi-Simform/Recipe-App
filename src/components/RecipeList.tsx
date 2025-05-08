@@ -3,7 +3,7 @@ import RecipeCard from '../components/RecipeCard';
 import { Recipe } from '../utilities/utility';
 
 interface RecipeListProps {
-  recipes: Recipe[];
+  recipes: Array<Recipe>;
 }
 
 const RecipeList: FC<RecipeListProps> = ({ recipes }) => {
