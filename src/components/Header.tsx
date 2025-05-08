@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import SearchBar from './searchBar';
-import RecipeList from './RecipeList';
-import { sampleRecipes } from './sampleRecipe';
-import { Recipe } from '../utilities/utility';
 
-const Header: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>(sampleRecipes);
+interface HeaderProps {
+  onSearch: (searchTerm: string) => void;
+}
 
-  useEffect(() => {
-    const filtered = sampleRecipes.filter((recipe) =>
-      recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      recipe.ingredients.some((ingredient) =>
-        ingredient.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    );
-    setFilteredRecipes(filtered);
-  }, [searchTerm]);
-
+const Header: React.FC<HeaderProps> = ({ onSearch }) => {
   return (
-    <>
-      <header>
-        <div className='left-logo'>
-          <img
-            src='/icon/logo1.png'
-            className='logo-image'
-            alt='logo'
-          />
-          <h1 id='app-name'>CookBook</h1>
-        </div>
-        <SearchBar onSearch={setSearchTerm} />
-      </header>
-      <RecipeList recipes={filteredRecipes} />
-    </>
+    <header>
+      <div className='left-logo'>
+        <img
+          src='/icon/logo1.png'
+          className='logo-image'
+          alt='logo'
+        />
+        <h1 id='app-name'>CookBook</h1>
+      </div>
+      <SearchBar onSearch={onSearch} />
+    </header>
   );
 };
 
 export default Header;
+
