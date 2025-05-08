@@ -5,6 +5,6 @@ export interface Recipe {
     shortDescription: string;
     calories: number;
     rating: number;
-    ingredients: string[];
+    ingredients: Array<string>;
     instructions: string;
   }
