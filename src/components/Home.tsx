@@ -6,7 +6,7 @@ import { Recipe } from '../utilities/utility';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>(sampleRecipes);
+  const [filteredRecipes, setFilteredRecipes] = useState<Array<Recipe>>(sampleRecipes);
 
   useEffect(() => {
     const filtered = sampleRecipes.filter((recipe) =>
