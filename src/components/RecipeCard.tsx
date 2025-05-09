@@ -1,5 +1,5 @@
-import '../components/RecipeCard.css';
-import { Recipe } from '../utilities/utility';
+import '../styles/RecipeCard.css'
+import { Recipe } from '../utilities/types';
 
 interface RecipeCardProps {
   recipe: Recipe;
