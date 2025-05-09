@@ -1,6 +1,6 @@
 import  { FC } from 'react';
 import RecipeCard from '../components/RecipeCard';
-import { Recipe } from '../utilities/utility';
+import { Recipe } from '../utilities/types';
 
 interface RecipeListProp{
   recipes: Array<Recipe>;
