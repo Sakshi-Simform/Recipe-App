@@ -2,11 +2,11 @@ import  { FC } from 'react';
 import RecipeCard from '../components/RecipeCard';
 import { Recipe } from '../utilities/utility';
 
-interface RecipeListProps {
+interface RecipeListProp{
   recipes: Array<Recipe>;
 }
 
-const RecipeList: FC<RecipeListProps> = ({ recipes }) => {
+const RecipeList: FC<RecipeListProp> = ({ recipes }) => {
   return (
     <div className="recipe-list">
       {recipes.map((recipe) => (
