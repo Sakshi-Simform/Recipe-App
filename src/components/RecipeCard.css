@@ -3,7 +3,6 @@
   height: 400px;
   cursor: pointer;
   border-radius: 10px;
-  overflow: hidden;
   perspective: 1000px;
 }
 
@@ -15,6 +14,7 @@
   transform-style: preserve-3d;
   position: relative;
 }
+
 .recipe-card:hover .flip-inner {
   transform: rotateY(180deg);
 }
@@ -51,7 +51,7 @@
 .recipe-card-back {
   background: #f8f8f8;
   transform: rotateY(180deg);
-  display: flex; 
+  display: flex;
   flex-direction: column;
   overflow-y: auto;
   backface-visibility: hidden;
@@ -64,8 +64,6 @@
   border-radius: 10px;
   z-index: 1;
 }
-
-
 
 .recipe-card-front img {
   width: 100%;
@@ -116,7 +114,6 @@ h3 {
   font-size: 14px;
   color: #ff9800;
 }
-
 
 .rating span {
   font-size: 18px;
