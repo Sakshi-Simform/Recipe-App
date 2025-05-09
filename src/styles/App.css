@@ -129,7 +129,6 @@ h1 {
   margin-top: 13px;
 
 }
-
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .recipe-list {
