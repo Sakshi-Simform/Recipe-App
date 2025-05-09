@@ -11,7 +11,6 @@ export const sampleRecipes: Array<Recipe> = [
     calories: 350,
     rating: 5
   },
-  
   {
     id: 2,
     title: 'Avocado Toast',
@@ -22,7 +21,6 @@ export const sampleRecipes: Array<Recipe> = [
     calories: 250,
     rating: 3
   },
-
   {
     id: 3,
     title: 'Fluffy Pancake',
