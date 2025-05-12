@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {Header} from '../components/Header';
-import {RecipeList} from '../components/RecipeList';
+import { Header } from '../components/Header';
+import { RecipeList } from '../components/RecipeList';
 import { sampleRecipes } from '../MockData/sampleRecipe';
 import { Recipe } from '../utilities/types';
 
@@ -10,10 +10,7 @@ export const HomePage: React.FC = () => {
 
   useEffect(() => {
     const filtered = sampleRecipes.filter((recipe) =>
-      recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      recipe.ingredients.some((ingredient) =>
-        ingredient.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredRecipes(filtered);
   }, [searchTerm]);
