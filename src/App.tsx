@@ -3,7 +3,7 @@ import './styles/App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {HomePage} from './pages/Home';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
@@ -14,5 +14,3 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
-export default App;
