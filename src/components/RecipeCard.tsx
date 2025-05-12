@@ -40,13 +40,13 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
             <div className="rating" role="rating-btn">{renderRating(recipe.rating)}</div>
           </div>
 
-          <h3>{recipe.title}</h3>
+          <h3 className='front-title'>{recipe.title}</h3>
           <p>{recipe.shortDescription}</p>
         </div>
 
         {/* Back Side */}
         <div className="recipe-card-back">
-          <h3>{recipe.title}</h3>
+          <h3 className='back-title'>{recipe.title}</h3>
           <p><strong>Ingredients:</strong></p>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
@@ -55,8 +55,8 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
           </ul>
 
           <button className="view-details-button">View Details</button>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
