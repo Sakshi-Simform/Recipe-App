@@ -5,6 +5,7 @@
   border-radius: 10px;
   perspective: 1000px;
   transform-style: preserve-3d;
+  background-color: transparent;
 }
 
 .flip-inner {
@@ -64,6 +65,7 @@
   height: 100%;
   border-radius: 10px;
   z-index: 1;
+  padding-top: -2px;
 }
 
 .recipe-card-front img {
@@ -73,7 +75,14 @@
   border-radius: 8px;
 }
 
-h3 {
+.back-title{
+  margin-top: 9px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.front-title{
   margin-top: 43px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -137,14 +146,14 @@ h3 {
 }
 
 p {
-  margin-top: 10px;
+  margin-top: 6px;
   line-height: 1.2;
   white-space: break-spaces;
   margin-left: 4px;
 }
 
 ul {
-  margin-top: 10px;
+  margin-top: 2px;
   padding-left: 20px;
 }
 
