@@ -1,11 +1,11 @@
 import React from 'react';
-import SearchBar from './searchBar';
+import {SearchBar} from './searchBar';
 
 interface HeaderProp{
   onSearch: (searchTerm: string) => void;
 }
 
-const Header: React.FC<HeaderProp> = ({ onSearch }) => {
+export const Header: React.FC<HeaderProp> = ({ onSearch }) => {
   return (
     <header>
       <div className='left-logo'>
@@ -20,6 +20,3 @@ const Header: React.FC<HeaderProp> = ({ onSearch }) => {
     </header>
   );
 };
-
-export default Header;
-

@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Recipe } from '../utilities/types';
 
-const RecipeDetails: React.FC = () => {
+export const RecipeDetails: React.FC = () => {
   const { state } = useLocation();
   const recipe: Recipe | undefined = state;
 
@@ -36,5 +36,3 @@ const RecipeDetails: React.FC = () => {
     </div>
   );
 };
-
-export default RecipeDetails;

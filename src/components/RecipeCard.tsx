@@ -22,7 +22,7 @@ const renderRating = (rating: number) => {
   return starIcons;
 };
 
-const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
+export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
   return (
     <div className="recipe-card">
       <div className="flip-inner">
@@ -60,5 +60,3 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
     </div>
   );
 };
-
-export default RecipeCard;

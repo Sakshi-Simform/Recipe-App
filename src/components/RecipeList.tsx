@@ -1,12 +1,12 @@
 import  { FC } from 'react';
-import RecipeCard from '../components/RecipeCard';
+import {RecipeCard} from '../components/RecipeCard';
 import { Recipe } from '../utilities/types';
 
 interface RecipeListProp{
   recipes: Array<Recipe>;
 }
 
-const RecipeList: FC<RecipeListProp> = ({ recipes }) => {
+export const RecipeList: FC<RecipeListProp> = ({ recipes }) => {
   return (
     <div className="recipe-list">
       {recipes.map((recipe) => (
@@ -18,5 +18,3 @@ const RecipeList: FC<RecipeListProp> = ({ recipes }) => {
     </div>
   );
 };
-
-export default RecipeList;
