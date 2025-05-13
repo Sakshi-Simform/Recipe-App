@@ -1,8 +1,10 @@
+@import './variable.css';
+
 .recipe-card {
-  width: 300px;
-  height: 400px;
+  width: var(--card-width);
+  height: var(--card-height);
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   perspective: 1000px;
   transform-style: preserve-3d;
   background-color: transparent;
@@ -12,9 +14,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform var(--transition-speed);
   transform-style: preserve-3d;
-  position: relative;
 }
 
 .recipe-card:hover .flip-inner {
@@ -28,8 +29,8 @@
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   padding: 20px;
   box-sizing: border-box;
   top: 0;
@@ -47,23 +48,18 @@
   justify-content: space-between;
   padding: 15px;
   z-index: 2;
-  background: #fff;
+  background: var(--bg-front);
 }
 
 .recipe-card-back {
-  background: #f8f8f8;
+  background: var(--bg-back);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   z-index: 1;
   padding-top: -2px;
 }
@@ -75,18 +71,19 @@
   border-radius: 8px;
 }
 
-.back-title{
-  margin-top: 9px;
-  font-size: 1.2rem;
+.back-title,
+.front-title {
+  font-size: var(--font-title-size);
   font-weight: 600;
   margin-left: 4px;
 }
 
-.front-title{
+.back-title {
+  margin-top: 9px;
+}
+
+.front-title {
   margin-top: 43px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-left: 4px;
 }
 
 .recipe-info-box {
@@ -95,8 +92,8 @@
   margin-top: 8px;
   gap: 46px;
   font-size: 0.9rem;
-  color: #000000;
-  background-color: #fff;
+  color: var(--font-color);
+  background-color: var(--bg-front);
   padding: 0px 9px;
   border-radius: 5px;
   position: absolute;
@@ -105,7 +102,7 @@
   transform: translateX(-50%);
   width: 79%;
   height: 41px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-strong);
 }
 
 .calorie-svg {
@@ -116,7 +113,7 @@
 .calories {
   font-size: 14px;
   font-weight: bold;
-  color: #000000;
+  color: var(--font-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,13 +133,13 @@
 
 .rating {
   font-size: 14px;
-  color: #ff9800;
+  color: var(--highlight-color);
   margin-top: 10px;
 }
 
 .rating span {
   font-size: 18px;
-  color: #FFD700;
+  color: var(--star-color);
 }
 
 p {
@@ -158,14 +155,14 @@ ul {
 }
 
 ul li {
-  font-size: 1rem;
+  font-size: var(--font-body-size);
   color: #000000e6;
 }
 
 .view-details-button {
   margin-top: 335px;
   padding: 10px 20px;
-  background-color: #33333396;
+  background-color: var(--button-bg);
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -178,5 +175,5 @@ ul li {
 }
 
 .view-details-button:hover {
-  background-color: #5c575796;
+  background-color: var(--button-bg-hover);
 }
