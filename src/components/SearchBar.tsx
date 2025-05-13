@@ -1,6 +1,6 @@
 import  {useState,  ChangeEvent, FC } from 'react';
-import '../styles/SearchBar.css'
 import dinnerLogo from '/assets/dinner.svg';
+import '../styles/SearchBar.css'
 
 interface SearchBarProp {
   onSearch: (searchTerm: string) => void;
