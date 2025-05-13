@@ -1,4 +1,6 @@
-import  { useState, ChangeEvent, FC } from 'react';
+import  {useState,  ChangeEvent, FC } from 'react';
+import '../styles/SearchBar.css'
+import dinnerLogo from '/assets/dinner.svg';
 
 interface SearchBarProp {
   onSearch: (searchTerm: string) => void;
@@ -15,13 +17,11 @@ export const SearchBar: FC<SearchBarProp> = ({ onSearch }) => {
 
   return (
     <div className="search-bar">
-      <svg className='dinner-logo' width="64px" height="64px" viewBox="0 0 1024.00 1024.00" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(0)">
-        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="40.96"></g>
-        <g id="SVGRepo_iconCarrier">
-          <path fill="#808080" d="M256 410.304V96a32 32 0 0 1 64 0v314.304a96 96 0 0 0 64-90.56V96a32 32 0 0 1 64 0v223.744a160 160 0 0 1-128 156.8V928a32 32 0 1 1-64 0V476.544a160 160 0 0 1-128-156.8V96a32 32 0 0 1 64 0v223.744a96 96 0 0 0 64 90.56zM672 572.48C581.184 552.128 512 446.848 512 320c0-141.44 85.952-256 192-256s192 114.56 192 256c0 126.848-69.184 232.128-160 252.48V928a32 32 0 1 1-64 0V572.48zM704 512c66.048 0 128-82.56 128-192s-61.952-192-128-192-128 82.56-128 192 61.952 192 128 192z"></path>
-        </g>
-      </svg>
+      <img 
+      className='dinner-logo '
+      src={dinnerLogo}
+      alt='dinner logo'
+      />
       <input
         type="text"
         placeholder="Search recipes..."
