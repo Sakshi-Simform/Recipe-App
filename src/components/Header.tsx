@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProp> = ({ onSearch }) => {
       <div className='left-logo'>
         <img
           src='/icon/logo1.png'
-          className='Cook book logo'
+          className='Cookbook-logo'
           alt='logo'
         />
         <h1 id='app-name'>CookBook</h1>
