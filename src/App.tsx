@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {HomePage} from './pages/Home';
-import './styles/App.css'
+import styles from './styles/App.module.css'
 
 export const App: React.FC = () => {
   return (
     <Router>
-      <div className="app">
+      <div className={styles.app}>
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
