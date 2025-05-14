@@ -1,6 +1,6 @@
-import  {useState,  ChangeEvent, FC } from 'react';
+import { useState, useEffect, ChangeEvent, FC } from 'react';
 import dinnerLogo from '/assets/dinner.svg';
-import styles from '../styles/SearchBar.module.css'
+import styles from '../styles/SearchBar.module.css';
 
 interface SearchBarProp {
   onSearch: (searchTerm: string) => void;
@@ -8,19 +8,32 @@ interface SearchBarProp {
 
 export const SearchBar: FC<SearchBarProp> = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>(searchTerm);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 2000); 
+
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  useEffect(() => {
+
+    onSearch(debouncedSearchTerm);
+  }, [debouncedSearchTerm, onSearch]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);
-    onSearch(value);
   };
 
   return (
     <div className={styles.searchbar}>
-      <img 
-      className={styles.dinnerlogo}
-      src={dinnerLogo}
-      alt='dinner logo'
+      <img
+        className={styles.dinnerlogo}
+        src={dinnerLogo}
+        alt="dinner logo"
       />
       <input
         type="text"
