@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Recipe } from '../utilities/types';
+import type { Recipe } from '../types/recipe.types';
 
 export const RecipeDetails: React.FC = () => {
   const { state } = useLocation();

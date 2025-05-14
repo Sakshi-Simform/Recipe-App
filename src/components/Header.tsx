@@ -1,5 +1,6 @@
 import React from 'react';
 import { SearchBar } from './SearchBar';
+import styles from '../styles/App.module.css'
 
 interface HeaderProp{
   onSearch: (searchTerm: string) => void;
@@ -8,13 +9,13 @@ interface HeaderProp{
 export const Header: React.FC<HeaderProp> = ({ onSearch }) => {
   return (
     <header>
-      <div className='left-logo'>
+      <div className={styles.leftlogo}>
         <img
           src='/icon/logo1.png'
-          className='Cookbook-logo'
+          className={styles.Cookbooklogo}
           alt='logo'
         />
-        <h1 id='app-name'>CookBook</h1>
+        <h1 className={styles.appname}>CookBook</h1>
       </div>
       <SearchBar onSearch={onSearch} />
     </header>

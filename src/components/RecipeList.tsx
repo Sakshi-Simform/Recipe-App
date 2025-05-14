@@ -1,6 +1,7 @@
 import  { FC } from 'react';
 import {RecipeCard} from '../components/RecipeCard';
-import { Recipe } from '../utilities/types';
+import type { Recipe } from '../types/recipe.types';
+import styles from '../styles/App.module.css'
 
 interface RecipeListProp{
   recipes: Array<Recipe>;
@@ -8,7 +9,7 @@ interface RecipeListProp{
 
 export const RecipeList: FC<RecipeListProp> = ({ recipes }) => {
   return (
-    <div className="recipe-list">
+    <div className={styles.recipelist}>
       {recipes.map((recipe) => (
         <RecipeCard
           key={recipe.id}

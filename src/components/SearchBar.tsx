@@ -1,6 +1,6 @@
 import  {useState,  ChangeEvent, FC } from 'react';
 import dinnerLogo from '/assets/dinner.svg';
-import '../styles/SearchBar.css'
+import styles from '../styles/SearchBar.module.css'
 
 interface SearchBarProp {
   onSearch: (searchTerm: string) => void;
@@ -16,9 +16,9 @@ export const SearchBar: FC<SearchBarProp> = ({ onSearch }) => {
   };
 
   return (
-    <div className="search-bar">
+    <div className={styles.searchbar}>
       <img 
-      className='dinner-logo '
+      className={styles.dinnerlogo}
       src={dinnerLogo}
       alt='dinner logo'
       />
