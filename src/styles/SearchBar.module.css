@@ -1,0 +1,37 @@
+@import './Variable.module.css';
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 0.75rem;
+    text-align: center;
+    position: relative;
+}
+
+.searchbar input {
+    max-width: 31.25rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius-pill);
+    font-size: 1.125rem;
+    outline: none;
+    background-color: #ffffff;
+    color: var(--font-color-dark);
+    box-shadow: var(--box-shadow-light);
+    transition: all 0.3s ease;
+}
+
+.searchbar input:hover {
+    background-color: var(--bg-color-off-white);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.dinnerlogo {
+    width: 2rem;
+    height: 1.3125rem; 
+    position: absolute;
+    margin-left: 14.4375rem; 
+    margin-top: 0.8125rem;
+  }
+  
