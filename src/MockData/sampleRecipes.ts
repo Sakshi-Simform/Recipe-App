@@ -1,4 +1,4 @@
-import { Recipe } from "../utilities/types";
+import type { Recipe } from "../types/recipe.types";
 
 export const sampleRecipes: Array<Recipe> = [
   {
