@@ -29,9 +29,15 @@
 
 .dinnerlogo {
     width: 2rem;
-    height: 1.3125rem; 
+    height: 1.3125rem;
     position: absolute;
-    margin-left: 14.4375rem; 
+    margin-left: 14.4375rem;
     margin-top: 0.8125rem;
-  }
-  
+}
+
+.searchkeyword {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 200px;
+}
