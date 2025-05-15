@@ -1,0 +1,142 @@
+@import './Variable.module.css';
+
+.details {
+    color: var(--font-color-light);
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
+    font-family: var(--font-family);
+}
+
+.recipecontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detailimage {
+    margin-top: 20px;
+    width: 40%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.recipedetailsimg {
+    margin-top: 5.5rem;
+    height: 700px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+    position: relative;
+    z-index: 1;
+    line-height: 1.7;
+}
+
+.recipedetailsimg:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    width: 55%;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 86px;
+}
+
+.recipedetails {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: left;
+    position: relative;
+}
+
+h2.details {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--highlight-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p.details {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    color: #000000;
+    padding-left: 10px;
+}
+
+h3.details {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #e6d057;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3.details:hover {
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+p.details {
+    font-size: 1rem;
+    color: #eaeaea;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .recipecontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detailimage {
+        width: 80%;
+    }
+
+    .info {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.info h2,
+.info h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.recipedetails h2.details,
+.recipedetails h3.details {
+    font-family: var(--font-family);
+    letter-spacing: 0.5px;
+}
+
+.recipedetails ul li {
+    color: #eeeeee;
+    margin-bottom: 8px;
+}
+
+.recipedata {
+    font-weight: bold;
+    font-size: 2rem;
+}
