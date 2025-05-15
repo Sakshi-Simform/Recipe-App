@@ -1,6 +1,7 @@
+import { useNavigate } from 'react-router-dom';
 import type { Recipe } from '../types/recipe.types';
 import calorieslogo from '/assets/calories.svg';
-import styles from  '../styles/RecipeCard.module.css'
+import styles from '../styles/RecipeCard.module.css'
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -24,6 +25,7 @@ const renderRating = (rating: number) => {
 };
 
 export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
+  const navigate = useNavigate();
   return (
     <div className={styles.recipecard}>
       <div className={styles.flipinner}>
@@ -34,10 +36,10 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
           <div className={styles.recipeinfobox}>
             <div className={styles.caloriessection}>
               <div className={styles.calories}>
-                <img 
-                className={styles.caloriesvg}
-                src={calorieslogo}
-                alt='calories'
+                <img
+                  className={styles.caloriesvg}
+                  src={calorieslogo}
+                  alt='calories'
                 />
                 <p className={styles.caloriedisplay}>{recipe.calories} kcal</p>
               </div>
@@ -59,9 +61,15 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
             ))}
           </ul>
 
-          <button className={styles.viewdetailsbutton}>View Details</button>
-          </div>
+          <button
+            className={styles.viewdetailsbutton}
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/recipe/${recipe.id}`, { state: recipe });
+            }}
+          >View Details</button>
         </div>
       </div>
+    </div>
   );
 };
