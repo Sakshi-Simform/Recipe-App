@@ -2,11 +2,12 @@ import React from 'react';
 import { SearchBar } from './SearchBar';
 import styles from '../styles/App.module.css'
 
-interface HeaderProp{
+interface HeaderProp {
   onSearch: (searchTerm: string) => void;
+  showSearch: boolean; 
 }
 
-export const Header: React.FC<HeaderProp> = ({ onSearch }) => {
+export const Header: React.FC<HeaderProp> = ({ onSearch, showSearch }) => {
   return (
     <header>
       <div className={styles.leftlogo}>
@@ -17,7 +18,7 @@ export const Header: React.FC<HeaderProp> = ({ onSearch }) => {
         />
         <h1 className={styles.appname}>CookBook</h1>
       </div>
-      <SearchBar onSearch={onSearch} />
+      {showSearch && <SearchBar onSearch={onSearch} />} 
     </header>
   );
 };
