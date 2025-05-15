@@ -1,9 +1,16 @@
-function App() {
-  return (
-    <>
-     <h1 className="head-content">CookBook</h1>
-    </>
-  )
-}
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {HomePage} from './pages/Home';
+import styles from './styles/App.module.css'
 
-export default App
+export const App: React.FC = () => {
+  return (
+    <Router>
+      <div className={styles.app}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
