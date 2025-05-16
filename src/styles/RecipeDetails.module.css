@@ -18,7 +18,6 @@
     
 }
 
-
 .recipeDetailsImg {
     margin-top: 5.5rem;
     height: 700px;
@@ -99,8 +98,6 @@ ul li {
     color: #f0f0f0;
     cursor: pointer;
 }
-
-
 
 @media (max-width: 768px) {
     .recipeContainer {
