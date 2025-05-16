@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <>
-      <Header onSearch={setSearchTerm} showSearch ={true}/>
+      <Header onSearch={setSearchTerm} showSearch={true}/>
       {!filteredRecipes.length ? (
         <p className={styles.searchkeyword}>No recipes found for "{searchTerm}". Please try a different keyword.</p>
       ) : (
