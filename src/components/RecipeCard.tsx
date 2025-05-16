@@ -33,15 +33,15 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
         <div className={styles.recipecardfront}>
           <img src={recipe.image} alt={recipe.title} loading="lazy" />
 
-          <div className={styles.recipeinfobox}>
-            <div className={styles.caloriessection}>
+          <div className={styles.recipeInfoBox}>
+            <div className={styles.caloriesSection}>
               <div className={styles.calories}>
                 <img
-                  className={styles.caloriesvg}
+                  className={styles.calorieSvg}
                   src={calorieslogo}
                   alt='calories'
                 />
-                <p className={styles.caloriedisplay}>{recipe.calories} kcal</p>
+                <p className={styles.calorieDisplay}>{recipe.calories} kcal</p>
               </div>
             </div>
             <div className={styles.rating} role="rating-btn">{renderRating(recipe.rating)}</div>
@@ -62,7 +62,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
           </ul>
 
           <button
-            className={styles.viewdetailsbutton}
+            className={styles.viewDetailsButton}
             onClick={(e) => {
               e.stopPropagation();
               navigate(`/recipe/${recipe.id}`, { state: recipe });
