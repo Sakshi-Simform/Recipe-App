@@ -15,7 +15,7 @@ export const HomePage: React.FC = () => {
     : sampleRecipes;
 
   return (
-    <MainLayout showSearch onSearch={setSearchTerm}>
+    <MainLayout onSearch={setSearchTerm} showSearch >
       {!filteredRecipes.length ? (
         <p className={styles.searchkeyword}>No recipes found for "{searchTerm}"</p>
       ) : (
