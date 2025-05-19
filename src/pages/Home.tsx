@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header } from '../components/Header';
+import { MainLayout } from '../components/MainLayout';
 import { RecipeList } from '../components/RecipeList';
 import { sampleRecipes } from '../MockData/sampleRecipes';
 import type { Recipe } from '../types/recipe.types';
@@ -9,18 +9,18 @@ export const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredRecipes: Recipe[] = searchTerm.trim()
-  ? sampleRecipes.filter((recipe) =>
-    recipe.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
-  ):sampleRecipes;
+    ? sampleRecipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+      )
+    : sampleRecipes;
 
   return (
-    <>
-      <Header onSearch={setSearchTerm} showSearch={true}/>
+    <MainLayout showSearch onSearch={setSearchTerm}>
       {!filteredRecipes.length ? (
-        <p className={styles.searchkeyword}>No recipes found for "{searchTerm}". Please try a different keyword.</p>
+        <p className={styles.searchkeyword}>No recipes found for "{searchTerm}"</p>
       ) : (
         <RecipeList recipes={filteredRecipes} />
       )}
-    </>
+    </MainLayout>
   );
 };
