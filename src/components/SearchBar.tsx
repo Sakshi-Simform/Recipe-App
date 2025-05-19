@@ -13,19 +13,17 @@ export const SearchBar: FC<SearchBarProp> = ({ onSearch }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
-    }, 500); 
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [searchTerm]);
 
   useEffect(() => {
-    if (debouncedSearchTerm.trim()) {
-      onSearch(debouncedSearchTerm);}
-    }, [debouncedSearchTerm, onSearch]);
+    onSearch(debouncedSearchTerm.trim());
+  }, [debouncedSearchTerm, onSearch]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchTerm(value);
+    setSearchTerm(e.target.value);
   };
 
   return (

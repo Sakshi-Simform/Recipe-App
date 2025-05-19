@@ -8,9 +8,10 @@ import styles from '../styles/SearchBar.module.css'
 export const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredRecipes: Recipe[] = sampleRecipes.filter((recipe) =>
-    recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredRecipes: Recipe[] = searchTerm.trim()
+  ? sampleRecipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  ):sampleRecipes;
 
   return (
     <>
