@@ -3,7 +3,6 @@
 .recipecard {
   width: var(--card-width);
   height: var(--card-height);
-  cursor: pointer;
   border-radius: var(--border-radius);
   perspective: 1000px;
   transform-style: preserve-3d;
