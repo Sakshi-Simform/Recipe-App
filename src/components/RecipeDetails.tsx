@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { MainLayout } from '../components/MainLayout';
 import { Recipe } from '../types/recipe.types';
 import styles from '../styles/RecipeDetails.module.css';
 
@@ -9,7 +8,7 @@ export const RecipeDetails: React.FC = () => {
   const recipe: Recipe | undefined = state;
 
   return (
-    <MainLayout showSearch={false}>
+    <>
       <div className={styles.recipeDetails}>
         <div className={styles.recipeContainer}>
           {recipe ? (
@@ -52,6 +51,6 @@ export const RecipeDetails: React.FC = () => {
           )}
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
