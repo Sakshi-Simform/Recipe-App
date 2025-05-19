@@ -105,6 +105,14 @@ h1 {
   line-height: 1.5;
 }
 
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+
 @media (max-width: 48rem) { 
   .recipe-list {
     gap: 0.9375rem; 
