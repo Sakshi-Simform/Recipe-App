@@ -8,7 +8,7 @@ interface HeaderProp {
   showSearch: boolean; 
 }
 
-export const Header: React.FC<HeaderProp> = ({ onSearch, showSearch }) => {
+export const Header: React.FC<HeaderProp> = ({ onSearch, showSearch=false }) => {
   return (
     <header>
       <div className={styles.leftlogo}>
