@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation , Link } from 'react-router-dom';
 import { Recipe } from '../types/recipe.types';
 import styles from '../styles/RecipeDetails.module.css';
 
@@ -47,7 +47,10 @@ export const RecipeDetails: React.FC = () => {
               </div>
             </>
           ) : (
-            <div className={styles.recipeData}>No recipe data found.</div>
+            <div className={styles.recipeData}>
+              <p>No recipe data found.</p>
+              <Link to="/" className={styles.backLink}>← Go back to home</Link>
+              </div>
           )}
         </div>
       </div>
