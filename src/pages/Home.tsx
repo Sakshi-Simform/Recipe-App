@@ -18,7 +18,9 @@ export const HomePage: React.FC<HomePageProps> = ({ searchTerm }) => {
   return (
     <>
       {!filteredRecipes.length ? (
-        <p className={styles.searchkeyword}>No recipes found for "{searchTerm}"</p>
+        <div>
+          <p className={styles.searchkeyword}>No recipes found for "{searchTerm}"</p>
+        </div>
       ) : (
         <RecipeList recipes={filteredRecipes} />
       )}
