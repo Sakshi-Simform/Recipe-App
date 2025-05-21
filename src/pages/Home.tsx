@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
-import { Header } from '../components/Header';
+import React from 'react';
 import { RecipeList } from '../components/RecipeList';
 import { sampleRecipes } from '../MockData/sampleRecipes';
 import type { Recipe } from '../types/recipe.types';
-import styles from '../styles/SearchBar.module.css'
+import styles from '../styles/SearchBar.module.css';
 
-export const HomePage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+interface HomePageProps {
+  searchTerm: string;
+}
 
-  const filteredRecipes: Recipe[] = sampleRecipes.filter((recipe) =>
-    recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+export const HomePage: React.FC<HomePageProps> = ({ searchTerm }) => {
+  const filteredRecipes: Recipe[] = searchTerm.trim()
+    ? sampleRecipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+      )
+    : sampleRecipes;
 
   return (
     <>
-      <Header onSearch={setSearchTerm} />
       {!filteredRecipes.length ? (
-        <p className={styles.searchkeyword}>No recipes found for "{searchTerm}". Please try a different keyword.</p>
+        <div>
+          <p className={styles.searchkeyword}>No recipes found for "{searchTerm}"</p>
+        </div>
       ) : (
         <RecipeList recipes={filteredRecipes} />
       )}
